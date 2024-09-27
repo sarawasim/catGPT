@@ -6,6 +6,7 @@ const cors = require("cors")
 const app = express()
 app.use(express.json())
 app.use(cors())
+const fetch = require("node-fetch")
 
 const apiKey = process.env.API_KEY
 
@@ -35,10 +36,10 @@ app.post("/", async (req, res) => {
       options
     )
     const data = await response.json()
-    res.status(200).res.send(data)
+    res.status(200).send(data)
   } catch (e) {
     console.error(e)
-    res.status.send("Server Error")
+    res.status(500).send("Server Error")
   }
 })
 
