@@ -6,11 +6,10 @@ const cors = require("cors")
 const app = express()
 app.use(express.json())
 app.use(cors())
-const fetch = require("node-fetch")
 
 const apiKey = process.env.API_KEY
 
-app.post("/", async (req, res) => {
+app.post("/completions", async (req, res) => {
   const options = {
     method: "POST",
     headers: {
