@@ -9,7 +9,7 @@ app.use(cors())
 
 const apiKey = process.env.API_KEY
 
-app.post("/completions", async (req, res) => {
+app.post("/", async (req, res) => {
   const options = {
     method: "POST",
     headers: {
@@ -35,9 +35,10 @@ app.post("/completions", async (req, res) => {
       options
     )
     const data = await response.json()
-    res.send(data)
+    res.status(200).res.send(data)
   } catch (e) {
     console.error(e)
+    res.status.send("Server Error")
   }
 })
 
