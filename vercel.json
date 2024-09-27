@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/App.jsx",
+      "src": "package.json",
       "use": "@vercel/static-build"
     },
     {
@@ -10,5 +10,8 @@
       "use": "@vercel/node"
     }
   ],
-  "routes": [{ "src": "/api/(.*)", "dest": "/api/$1" }]
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
