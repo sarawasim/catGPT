@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="app bg-white font-sometype flex">
       {/* side bar */}
-      <section className="bg-pink-100 h-screen w-[300px] flex flex-col justify-between py-4 px-4">
+      <section className="bg-pink-100 h-screen w-[300px] flex-col justify-between py-4 px-4 hidden sm:flex">
         <Button text="New Chat" onClick={createNewChat} />
         {/* Chat History */}
         <h2 className="text-xs text-slate-900 pt-4 pb-2">
