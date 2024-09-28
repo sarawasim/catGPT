@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="app bg-white font-sometype flex">
       {/* side bar */}
-      <section className="bg-pink-100 h-screen w-[300px] flex-col justify-between py-4 px-4 hidden sm:flex">
+      <section className="bg-pink-100 h-dvh w-[300px] flex-col justify-between py-4 px-4 hidden sm:flex">
         <Button text="New Chat" onClick={createNewChat} />
         {/* Chat History */}
         <h2 className="text-xs text-slate-900 pt-4 pb-2">
@@ -103,7 +103,7 @@ function App() {
       </section>
 
       {/* main */}
-      <section className="h-screen w-full flex flex-col justify-between items-center py-4 text-center">
+      <section className="h-dvh w-full flex flex-col justify-between items-center py-4 text-center">
         <div className="flex items-center">
           <img src="images/cat.gif" alt="" className="h-24 w-auto" />
 
