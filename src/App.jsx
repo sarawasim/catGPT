@@ -85,7 +85,7 @@ function App() {
         <h2 className="text-xs text-slate-900 pt-4 pb-2">
           <strong>Chat History</strong>
         </h2>
-        <ul className="h-full overflow-scroll">
+        <ul className="h-full overflow-y-auto">
           {uniqueTitles.map((title, index) => (
             <li
               key={index}
@@ -106,14 +106,13 @@ function App() {
       <section className="h-screen w-full flex flex-col justify-between items-center py-4 text-center">
         <div className="flex items-center">
           <img src="images/cat.gif" alt="" className="h-24 w-auto" />
-          {/* <img src="images/paw.png" alt="" className="h-24 w-auto" /> */}
 
           <h1 className="text-5xl font-bold text-slate-900 tracking-wider">
             CatGPT
           </h1>
         </div>
         {/* Chat Feed */}
-        <ul className="feed overflow-scroll w-full max-w-[665px] py-10">
+        <ul className="feed overflow-y-auto w-full max-w-[665px] py-10">
           {currentChat?.map((chatMessage, index) => (
             <li
               key={index}
