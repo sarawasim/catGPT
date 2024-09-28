@@ -139,7 +139,7 @@ function App() {
         <div className="bottom-section w-full flex flex-col justify-center items-center">
           {isLoading && <Loading />}
           {/* Chat Input */}
-          <div className="input-container relative w-full max-w-[700px]">
+          <div className="input-container relative w-full max-w-[700px] px-4">
             <div
               ref={inputRef}
               role="input"
@@ -156,7 +156,7 @@ function App() {
             />
             <PaperAirplaneIcon
               aria-hidden="true"
-              className="-ml-0.5 h-8 w-8 absolute bottom-2 right-2 bg-pink-200 rounded-full p-1.5 cursor-pointer"
+              className="-ml-0.5 h-8 w-8 absolute bottom-2 right-6 bg-pink-200 rounded-full p-1.5 cursor-pointer"
               onClick={getMessages}
             />
           </div>
